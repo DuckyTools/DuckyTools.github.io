@@ -1,181 +1,222 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Duck's Tools™</title>
-        <link rel="icon" href="favicon.ico" type= "image/x-icon">
-        <meta name="description" content="Welcome to Ducky Tools."/>
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#ff0033">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./">Duck's Tools™</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="color: white;"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle language-selector" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language 🌎
-                        </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" onclick="changeLanguage('en')" href="javascript:void(0);">English</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" onclick="changeLanguage('es')" href="javascript:void(0);">Spanish</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" onclick="changeLanguage('ru')" href="javascript:void(0);">Russian</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" onclick="switchDarkMode()" href="javascript:void(0);">
-                                <i class="bi bi-brightness-high-fill"></i>
-                                /<i class="bi bi-moon-stars-fill"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container-xl p-4 text-center">
-            <h3 class="main-text">
-                <span data-lang="en" style="display: inline;">Duck's Tools is an archive for all the cheats/scripts in the
-                world (that we have access to)</span>
-                <span data-lang="es" style="display: none;">Duck's Tools es un archivo para todos los trucos/scripts del
-                mundo. (a los que tenemos acceso)</span>
-                <span data-lang="ru" style="display: none;">Duck's Tools - архив всех читов и скриптов в мире. (к которым у
-                нас есть доступ) </span>
-            </h3>
-            <div class="container-sm my-4">
-                <div class="row align-items-center text-center">
-                    <div class="m-2 col-sm col-12">
-                        <a href="https://www.mediafire.com/file/xi1fzrtyi2r3dnr/duckys-archive.zip/file" class="btn btn-primary">
-                            <span data-lang="en" style="display: inline;">Download from MediaFire</span>
-                            <span data-lang="es" style="display: none;">Descargar desde MediaFire</span>
-                            <span data-lang="ru" style="display: none;">Скачать с MediaFire</span>
-                        </a>
-                    </div>
-                    <div class="m-2 col-sm col-12">
-                        <a href="https://anonfiles.com/e8Ac845az7/duckys_archive_zip" class="btn btn-primary">
-                            <span data-lang="en" style="display: inline;">Download from AnonFiles</span>
-                            <span data-lang="es" style="display: none;">Descargar desde AnonFiles</span>
-                            <span data-lang="ru" style="display: none;">Скачать с AnonFiles</span>
-                        </a>
-                    </div>
-                    <div class="m-2 col-sm col-12">
-                        <a href="https://mega.nz/file/JvcF0CIJ#UdcSNFad4NQi6_TCfV60r4jduCQIbLm67hbK0AewvAQ" class="btn btn-primary">
-                            <span data-lang="en" style="display: inline;">Download from Mega</span>
-                            <span data-lang="es" style="display: none;">Descargar desde Mega</span>
-                            <span data-lang="ru" style="display: none;">Скачать с Mega</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <h4>
-                <span data-lang="en" style="display: inline;">Disclaimer:</span>
-                <span data-lang="es" style="display: none;">Descargo de responsabilidad:</span>
-                <span data-lang="ru" style="display: none;">Отказ от ответственности:</span>
-            </h4>
-            <p>We disclaim responsibility for any consequences resulting from the use of our cheat services.
 
-        </p>
-        </div>
-        <script>
-            const languageSelect = document.getElementById('languageSelect');
-            const body = document.body;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck's Tools™</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <style>
+        .modal-open .modal-backdrop {
+            backdrop-filter: blur(5px);
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 1;
+        }
+    </style>
+</head>
 
-            function changeLanguage(selectedLanguage) {
-                console.log('Selected language:', selectedLanguage);
-                document.querySelectorAll('[data-lang]').forEach(element=>{
-                    element.style.display = 'none';
-                }
-                );
-                document.querySelectorAll(`[data-lang="${selectedLanguage}"]`).forEach(element=>{
-                    element.style.display = 'inline';
-                }
-                );
-            }
-
-            function switchDarkMode() {
-                if (document.documentElement.getAttribute("data-bs-theme") === "dark") {
-                    document.documentElement.setAttribute("data-bs-theme", "light");
-                } else {
-                    document.documentElement.setAttribute("data-bs-theme", "dark");
-                }
-            }
-
-            changeLanguage("en");
-        </script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./">
+                Duck's Tools™
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle language-selector" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language 🌎
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="changeLanguage('en')"
+                                    href="javascript:void(0);">English</a></li>
+                            <li><a class="dropdown-item" onclick="changeLanguage('es')"
+                                    href="javascript:void(0);">Español</a></li>
+                            <li><a class="dropdown-item" onclick="changeLanguage('ru')"
+                                    href="javascript:void(0);">Русский</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" onclick="switchDarkMode()" href="javascript:void(0);"><i
+                                class="bi bi-brightness-high-fill"></i>/<i class="bi bi-moon-stars-fill"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <script>
-            function getCookie(t) {
-                for (var e = t + "=", n = decodeURIComponent(document.cookie).split(";"), o = 0; o < n.length; o++) {
-                    for (var i = n[o]; " " == i.charAt(0); )
-                        i = i.substring(1);
-                    if (0 == i.indexOf(e))
-                        return i.substring(e.length, i.length)
-                }
-                return ""
+    </nav>
+
+    <div class="container-xl p-4 text-center">
+        <h3 class="my-3">
+            <span data-lang="en" style="display: inline;">Duck's tools is an archive for all the cheats/scripts in the
+                world (that we have access to)</span>
+            <span data-lang="es" style="display: none;">Duck's Tools es un archivo para todos los trucos/scripts del
+                mundo. (a los que tenemos acceso)</span>
+            <span data-lang="ru" style="display: none;">Duck's Tools - архив всех читов и скриптов в мире. (к которым у
+                нас есть доступ) </span>
+        </h3>
+
+        <div class="my-3 col-sm col-12">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span data-lang="en" style="display: inline;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                        <path d="M7 11l5 5l5 -5"></path>
+                        <path d="M12 4l0 12"></path>
+                    </svg>
+                    Download this
+                </span>
+                <span data-lang="es" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                        <path d="M7 11l5 5l5 -5"></path>
+                        <path d="M12 4l0 12"></path>
+                    </svg>
+                    descarga esto
+                </span>
+                <span data-lang="ru" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                        <path d="M7 11l5 5l5 -5"></path>
+                        <path d="M12 4l0 12"></path>
+                    </svg>
+                    скачать это
+                </span>
+            </button>
+        </div>
+
+
+        <div class="container-sm p-3">
+            <div class="row align-items-center text-center">
+                <div class="card m-2 col-md col-12 h-100">
+                    <div class="card-body h-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-speedtest"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M5.636 19.364a9 9 0 1 1 12.728 0"></path>
+                            <path d="M16 9l-4 4"></path>
+                        </svg>
+                        <h5 class="card-title">Speed Demons</h5>
+                        <p class="card-text">Need for speed? Count on us for lightning-fast downloads and turbocharged scripts.</p>
+                    </div>
+                </div>
+                <div class="card m-2 col-md col-12 h-100">
+                    <div class="card-body h-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-free-rights" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M13.867 9.75c-.246 -.48 -.708 -.769 -1.2 -.75h-1.334c-.736 0 -1.333 .67 -1.333 1.5c0 .827 .597 1.499 1.333 1.499h1.334c.736 0 1.333 .671 1.333 1.5c0 .828 -.597 1.499 -1.333 1.499h-1.334c-.492 .019 -.954 -.27 -1.2 -.75"></path>
+                            <path d="M12 7v2"></path>
+                            <path d="M12 15v2"></path>
+                            <path d="M6 6l1.5 1.5"></path>
+                            <path d="M16.5 16.5l1.5 1.5"></path>
+                         </svg>
+                        <h5 class="card-title">Absolutely Free</h5>
+                        <p class="card-text">Enjoy everything without spending a dime. No hidden costs, no sneaky money grabs's</p>
+                    </div>
+                </div>
+                <div class="card m-2 col-md col-12 h-100">
+                    <div class="card-body h-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-check-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" stroke-width="0" fill="currentColor"></path>
+                         </svg>
+                        <h5 class="card-title">Secure & Reliable</h5>
+                        <p class="card-text">We're all about security here so each item is virus checked,   For peace of mind! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4>
+            <span data-lang="en" style="display: inline;">Disclaimer:</span>
+            <span data-lang="es" style="display: none;">Descargo de responsabilidad:</span>
+            <span data-lang="ru" style="display: none;">Отказ от ответственности:</span>
+        </h4>
+
+        <p>
+            We disclaim responsibility for any consequences resulting from the use of our cheat services.
+        </p>
+    </div>
+
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Get access to the Ducks Tools</h1>
+                </div>
+                <div class="modal-body text-center">
+                    you have to join this discord server to use the site click the link
+                    <a href="https://discord.gg/rpnmods" target="_blank">click here no virus</a><br>
+                    <input type="text" class="form-control my-3" id="verification" placeholder="verification code"></input>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="verifyCode()" class="btn btn-primary">Verify code</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const languageSelect = document.getElementById('languageSelect');
+        const codeInput = document.getElementById('verification');
+        const body = document.body;
+        const password = "Á7B8*-9D0É1-F2G3$-4I5J6-#K7LÈ8-M9O0+P-Q1&R2-3T4U%5";
+        const download_url = "";
+
+        function changeLanguage(selectedLanguage) {
+            console.log('Selected language:', selectedLanguage);
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.style.display = 'none';
+            });
+            document.querySelectorAll(`[data-lang="${selectedLanguage}"]`).forEach(element => {
+                element.style.display = 'inline';
+            });
+        }
+
+        function switchDarkMode() {
+            if (document.documentElement.getAttribute("data-bs-theme") === "dark") {
+                document.documentElement.setAttribute("data-bs-theme", "light");
+            } else {
+                document.documentElement.setAttribute("data-bs-theme", "dark");
             }
-            getCookie("hostinger") && (document.cookie = "hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",
-            location.reload());
-            var wordpressAdminBody = document.getElementsByClassName("wp-admin")[0]
-              , notification = document.getElementsByClassName("notice notice-success is-dismissible")
-              , hostingerLogo = document.getElementsByClassName("hlogo")
-              , mainContent = document.getElementsByClassName("notice_content")[0];
-            if (null != wordpressAdminBody && 0 < notification.length && null != mainContent) {
-                var googleFont = document.createElement("link");
-                googleFontHref = document.createAttribute("href"),
-                googleFontRel = document.createAttribute("rel"),
-                googleFontHref.value = "https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",
-                googleFontRel.value = "stylesheet",
-                googleFont.setAttributeNode(googleFontHref),
-                googleFont.setAttributeNode(googleFontRel);
-                var css = "@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}"
-                  , style = document.createElement("style")
-                  , sheet = window.document.styleSheets[0];
-                style.styleSheet ? style.styleSheet.cssText = css : style.appendChild(document.createTextNode(css)),
-                document.getElementsByTagName("head")[0].appendChild(style),
-                document.getElementsByTagName("head")[0].appendChild(googleFont);
-                var button = document.getElementsByClassName("upgrade_button_red")[0]
-                  , link = button.parentElement;
-                link.setAttribute("href", "https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),
-                link.innerHTML = '<button class="upgrade_button_red_sale">Claim Deal</button>',
-                (notification = notification[0]).setAttribute("style", "padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),
-                notification.className = "notice notice-error is-dismissible";
-                var mainContentHolder = document.getElementById("main_content");
-                mainContentHolder.setAttribute("style", "padding: 0;"),
-                hostingerLogo[0].remove();
-                var h1Tag = notification.getElementsByTagName("H1")[0];
-                h1Tag.className = "000-h1",
-                h1Tag.innerHTML = "Black Friday",
-                h1Tag.setAttribute("style", 'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');
-                var h2Tag = document.createElement("H2");
-                h2Tag.innerHTML = "Up to 90% off 4-year hosting plans + free domain, SSL & DDoS protection",
-                h2Tag.setAttribute("style", 'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),
-                h1Tag.parentNode.insertBefore(h2Tag, h1Tag.nextSibling);
-                var paragraph = notification.getElementsByTagName("p")[0];
-                paragraph.innerHTML = "$<span style='font-size: 80px;'>2.49</span>/mo",
-                paragraph.setAttribute("style", 'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');
-                var list = notification.getElementsByTagName("UL")[0];
-                list.remove();
-                var org_html = mainContent.innerHTML
-                  , new_html = '<div class="content-wrapper">' + mainContent.innerHTML + '</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"></div>';
-                mainContent.innerHTML = new_html;
-                var saleImage = mainContent.getElementsByClassName("web-hosting-90-off-image")[0]
+        }
+
+        function verifyCode() {
+            if (codeInput.value === password) {
+                alert("Successful code verification");
+                window.open(https://www.mediafire.com/file/xi1fzrtyi2r3dnr/duckys-archive.zip/file, '_blank').focus();
+            } else {
+                alert("Wrong code, make sure you copied the code exactly");
             }
-        </script>
-    </body>
+        }
+
+        changeLanguage("en");
+    </script>
+</body>
+
 </html>
